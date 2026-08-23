@@ -70,13 +70,9 @@ function App() {
         <div className={`intro-overlay ${slideUp ? 'slide-up' : ''}`}>
           <div className="intro-content">
             <div className="intro-logo-wrapper">
-              <Logo size={90} />
+              <Logo size={70} />
             </div>
-            <div className="intro-welcome-text">WELCOME</div>
-            <div className="intro-subtitle-text" style={{ textAlign: 'center' }}>
-              <div>OTM</div>
-              <div className="text-smaller">productions</div>
-            </div>
+            <div className="intro-welcome-text" style={{ marginTop: '20px' }}>WELCOME</div>
           </div>
         </div>
       )}
@@ -194,8 +190,7 @@ function App() {
       <footer className="footer">
         <div className="container">
           <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-            <Logo size={42} />
-            OTM
+            <Logo size={24} />
           </div>
           <div className="footer-socials">
             <a href="https://www.instagram.com/otm__productions_" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

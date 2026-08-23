@@ -68,8 +68,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#home" className="nav-logo" onClick={(e) => handleLinkClick(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '12px', zIndex: 50, position: 'relative' }}>
-          <Logo size={42} />
-          OTM<span>.</span>
+          <Logo size={24} />
         </a>
 
         <StaggeredMenu 
