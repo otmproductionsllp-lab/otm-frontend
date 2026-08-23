@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import BlurText from './BlurText';
 
 const HeroParticles = () => {
   const canvasRef = useRef(null);
@@ -124,10 +125,31 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-subtitle">Video Production Service & Creative Studio</div>
-          <h1 className="hero-title">
-            ONE TAKE MEDIA
-            <span>Creating, Capturing, Connecting</span>
-          </h1>
+          <div className="hero-title">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+              <BlurText
+                text="OTM"
+                delay={200}
+                animateBy="words"
+                direction="top"
+                className=""
+              />
+              <BlurText
+                text="productions"
+                delay={200}
+                animateBy="words"
+                direction="top"
+                className="text-smaller"
+              />
+            </div>
+            <BlurText
+              text="Creating, Capturing, Connecting"
+              delay={150}
+              animateBy="words"
+              direction="bottom"
+              className="hero-title-sub"
+            />
+          </div>
           <p className="hero-desc">
             Your source for stories that matter.
           </p>

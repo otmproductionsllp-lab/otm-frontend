@@ -1,70 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
+import StaggeredMenu from './StaggeredMenu';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileActive, setIsMobileActive] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const hash = window.location.hash;
-      if (hash === '#about') {
-        setActiveSection('about');
-        return;
-      }
-      if (hash === '#contact') {
-        setActiveSection('contact');
-        return;
-      }
-
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-
-      const sections = ['home', 'gallery'];
-      const scrollPos = window.scrollY + 100;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveSection(section);
-          }
-        }
-      }
     };
-
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash === '#about') {
-        setActiveSection('about');
-        window.scrollTo({ top: 0, behavior: 'instant' });
-      } else if (hash === '#contact') {
-        setActiveSection('contact');
-        window.scrollTo({ top: 0, behavior: 'instant' });
-      } else {
-        handleScroll();
-      }
-    };
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('hashchange', handleHashChange);
-    handleHashChange();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('hashchange', handleHashChange);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleLinkClick = (e, targetId) => {
     e.preventDefault();
-    setIsMobileActive(false);
 
     if (targetId === 'about') {
       window.location.hash = 'about';
@@ -113,65 +67,28 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#home" className="nav-logo" onClick={(e) => handleLinkClick(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <a href="#home" className="nav-logo" onClick={(e) => handleLinkClick(e, 'home')} style={{ display: 'flex', alignItems: 'center', gap: '12px', zIndex: 50, position: 'relative' }}>
           <Logo size={42} />
-          ONETAKE<span>.</span>
+          OTM<span>.</span>
         </a>
 
-        <ul className={`nav-links ${isMobileActive ? 'active' : ''}`}>
-          <li>
-            <a
-              href="#home"
-              className={activeSection === 'home' ? 'active' : ''}
-              onClick={(e) => handleLinkClick(e, 'home')}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#gallery"
-              className={activeSection === 'gallery' ? 'active' : ''}
-              onClick={(e) => handleLinkClick(e, 'gallery')}
-            >
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              className={activeSection === 'about' ? 'active' : ''}
-              onClick={(e) => handleLinkClick(e, 'about')}
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              className={activeSection === 'contact' ? 'active' : ''}
-              onClick={(e) => handleLinkClick(e, 'contact')}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-
-        <button 
-          className="nav-toggle" 
-          onClick={() => setIsMobileActive(!isMobileActive)}
-          aria-label="Toggle navigation menu"
-        >
-          {isMobileActive ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M18 6L6 18M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        <StaggeredMenu 
+          isFixed={true}
+          menuButtonColor="#fff"
+          openMenuButtonColor="#fff"
+          accentColor="#d4af37"
+          items={[
+            { label: 'Home', link: '#home', id: 'home' },
+            { label: 'Gallery', link: '#gallery', id: 'gallery' },
+            { label: 'About', link: '#about', id: 'about' },
+            { label: 'Contact', link: '#contact', id: 'contact' }
+          ]}
+          socialItems={[
+            { label: 'Instagram', link: 'https://www.instagram.com/otm__productions_' },
+            { label: 'WhatsApp', link: 'https://wa.me/917994271815' }
+          ]}
+          onItemClick={(e, item) => handleLinkClick(e, item.id)}
+        />
       </div>
     </nav>
   );

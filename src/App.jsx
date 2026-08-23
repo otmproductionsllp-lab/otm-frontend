@@ -73,7 +73,10 @@ function App() {
               <Logo size={90} />
             </div>
             <div className="intro-welcome-text">WELCOME</div>
-            <div className="intro-subtitle-text">OTM PRODUCTIONS</div>
+            <div className="intro-subtitle-text" style={{ textAlign: 'center' }}>
+              <div>OTM</div>
+              <div className="text-smaller">productions</div>
+            </div>
           </div>
         </div>
       )}
@@ -160,10 +163,10 @@ function App() {
                     </p>
                   </div>
                   <div className="founder-socials">
-                    <a 
-                      href="https://www.instagram.com/kh__story/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <a
+                      href="https://www.instagram.com/kh__story/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label="Khaja Hussain Instagram"
                       className="founder-social-link"
                     >
@@ -192,7 +195,7 @@ function App() {
         <div className="container">
           <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
             <Logo size={42} />
-            ONETAKE<span>.</span>
+            OTM
           </div>
           <div className="footer-socials">
             <a href="https://www.instagram.com/otm__productions_" className="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
