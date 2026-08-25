@@ -87,7 +87,6 @@ function App() {
               title="OTM Production | Video Production Service & Creative Studio" 
               description="Official portfolio of OTM Production. We create, capture, and connect, providing high-end video production, cinematic films, and brand storytelling."
             />
-          <>
             {/* Hero Area */}
             <Hero />
 
@@ -102,7 +101,6 @@ function App() {
               title="About OTM Production | The Studio & Founder Khaja Hussain" 
               description="With over a decade of experience creating stories that matter, OTM Production is an elite creative studio specializing in premium cinematic films."
             />
-          <>
             {/* About / Biography Area */}
             <section id="about" className="about-section">
               <div className="container about-content">
@@ -197,7 +195,7 @@ function App() {
               title="Contact OTM Production | Hire us for your next project" 
               description="Get in touch with OTM Production for high-end commercial campaigns, event coverage, and premium corporate narratives."
             />
-          /* Contact Area */
+          {/* Contact Area */}
           <Contact />
           </>
         )}
