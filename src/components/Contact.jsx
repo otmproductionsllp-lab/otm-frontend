@@ -13,11 +13,11 @@ const Contact = () => {
               Let's Create <span>Something Timeless</span>
             </h2>
             <p className="contact-description">
-              ONETAKE MEDIA is open to brand collaborations, corporate campaigns, cinematic films, and visual projects worldwide. Reach out through any of our channels—our team is ready to bring your vision to life.
+              OTM Production is open to brand collaborations, corporate campaigns, cinematic films, and visual projects worldwide. Reach out through any of our channels—our team is ready to bring your vision to life.
             </p>
             <div className="contact-footer-brand">
               <span className="brand-dot"></span>
-              <span>ONETAKE MEDIA STUDIO</span>
+              <span>OTM Production STUDIO</span>
             </div>
           </div>
 

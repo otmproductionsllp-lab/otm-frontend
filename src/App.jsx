@@ -99,13 +99,13 @@ function App() {
                   <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0' }}>
                     The <span>Studio</span>
                   </h2>
-                  <h3>ONETAKE MEDIA</h3>
+                  <h3>OTM Production</h3>
                   <p style={{ color: 'var(--accent-gold)', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem', marginBottom: '1.5rem', fontWeight: '600' }}>
                     Video Production & Creative Agency
                   </p>
                   <div className="about-text">
                     <p>
-                      With over a decade of experience creating stories that matter, ONETAKE MEDIA is an elite creative studio specializing in premium cinematic films, brand documentaries, high-end commercial campaigns, and event coverage.
+                      With over a decade of experience creating stories that matter, OTM Production is an elite creative studio specializing in premium cinematic films, brand documentaries, high-end commercial campaigns, and event coverage.
                     </p>
                     <p>
                       Every project we undertake is handled with unmatched dedication—blending sophisticated cinematography, high-fidelity sound design, and emotional depth to deliver visuals that captivate audiences. We transform visual concepts into cinematic realities.
@@ -152,10 +152,10 @@ function App() {
                   <p className="founder-role">Founder & CEO</p>
                   <div className="founder-text">
                     <p>
-                      Khaja Hussain is the visionary founder and CEO of ONETAKE MEDIA. Possessing a deep-seated passion for cinematic storytelling and visual precision, he has directed and produced numerous commercial campaigns, music videos, and premium corporate narratives that captivate audiences.
+                      Khaja Hussain is the visionary founder and CEO of OTM Production. Possessing a deep-seated passion for cinematic storytelling and visual precision, he has directed and produced numerous commercial campaigns, music videos, and premium corporate narratives that captivate audiences.
                     </p>
                     <p>
-                      His creative philosophy is centered around authenticity—capturing raw emotion and visual depth to build powerful narratives. Under his leadership, ONETAKE MEDIA has emerged as an elite visual agency known for its artistic integrity and technically sophisticated execution.
+                      His creative philosophy is centered around authenticity—capturing raw emotion and visual depth to build powerful narratives. Under his leadership, OTM Production has emerged as an elite visual agency known for its artistic integrity and technically sophisticated execution.
                     </p>
                   </div>
                   <div className="founder-socials">
@@ -208,7 +208,7 @@ function App() {
             </a>
           </div>
           <p className="footer-copy">
-            &copy; {new Date().getFullYear()} ONETAKE MEDIA. All Rights Reserved. Created for Visual Excellence.
+            &copy; {new Date().getFullYear()} OTM Production. All Rights Reserved. Created for Visual Excellence.
           </p>
         </div>
       </footer>
